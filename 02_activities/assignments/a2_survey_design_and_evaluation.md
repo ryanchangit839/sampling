@@ -6,7 +6,10 @@ The goal of this assignment is to practice developing and evaluating sampling ma
 
 ### Part A - Survey Design:
 
-Select one of the scenarios below and design a survey to meet the need(s) outlined in the prompt.
+Select one of the scenarios below and design a survey to meet the 
+need(s) outlined in the prompt.
+
+Scenario 1:
 
 1.	In two to three sentences, describe the purpose of your survey
 2.	Describe your target population, sampling frame, sampling units, and overall sampling strategy.
@@ -40,38 +43,122 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `1`
 
 Describe the purpose of your survey:
+
 ```
 write your answer here...
+The purpose of the survey is to understand the reason behind the high turnover rate of entry- and lower-level positions across the departments of a large tech company, and to identify workplace factors that strongly predict turnover among them. This is to inform the HR department on changes needed to improve employee satisfaction and retnention.
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
 write your answer here...
+target population: all current employees in entry- and lower-level positions (level 1-4) at the company exluding management, contractors and interns, across all departments.
+sampling frame: employees in entry- and lower-level positions who registered on the HR system with contact information (email)
+sampling unit: employee
+overall sampling strategy: stratified random sampling, with department as the stratum. A simple random sample is drawn from each stratum with proportional allocation to ensure the same weight of the samples from each stratum which will simplify analysis. Probability sampling is chosen over convenient sampling (e.g. first 500 returned survey) since non-response bias will be a major concern for this study. The survey will have anonymity guaranteed to maximize response within the probability sample. Reminder emails will be sent to improve response rate.
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+1. What department do you work in?
+[Engineering/ Marketing/ Sales/ Customer Suuport/ Product/ Operations/ others (specify)]
+2. What is your current job level?
+[Level 1 (Entry)/ Level 2 (Junoir)/ Level 3 (mid-level)/ Level 4 (Senior)/ Other]
+3. How long have you been in the company?
+[less than 6 months/ 6-12 months/ 1-2 years/ 2-5 years/ more than 5 years]
+4. Overall, how satisfied are you with your current role at the company?
+[Very dissatisfied / Dissatisfied / Neutral / Satisfied / Very satisfied]
+5. To what extend do you agree with the following statements?
+[each statement uses the same scale: strongly disagree/ disagree/ neutral/ agree/ strongly agree]
+    a. My compensation is fair for the work I do.
+    b. My manager gives me clear, regular feedback.
+    c. I have meaningful opportunities to grow my career here.
+    d. I feel respected by people I work with day-to-day.
+    e. My workload is manageable on a typical week.
+    f. The company supports my mental health and well-being.
+6. How likely are you to still be working at this company 12 months from now?
+[Very unlikely / Unlikely / Neutral / Likely / Very likely]
+7. Have you actively looked for a job outside of the company in the past 6 months?
+[Yes/ No/ Prefer not to say]
+8. If you were to leave the company, what would be the single most important reason?
+[compensation/ manager or leadship/ work-life balance/ growth opportunities/ lack of challenge or interest/ better opportunity elsewhere/ other (specify)]
+9. (Optional) What is the ONE change the company could make that would most improve your experience here? (open response, <100 words)
 ```
 
 ## Part B - Survey Evaluation:
 
 Identify and describe survey features:
-
 ```
 write your answer here
+1. Sample type: 
+Cross-sectional two-staged stratified probability sampling. Each stratum is a province/census metropolitan area (CMA). First stage: groups of telephone numbers tied to the same address are sampled; second stage: one eligible member (aged 15+) is randomly selected per household. 
+The ten provinces are divided into 27 strata. Major  Census Metropolitan Areas (St. John's, Halifax, Saint John, Montreal,  Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, Vancouver, Victoria) are each individual strata; remaining CMAs in Quebec, Ontario, and British Columbia are grouped  into three additional strata; non-CMA areas of each province form ten more strata.
+A sub-design 'rejective sampling' was chosen as part of the sample design. After a respondent is classified as a volunteer or not, sub-sampling is carried out for selected respondents who are not volunteers. All respondents who are volunteers do a long interview. Those who are NOT volunteers are randomly divided into two groups. One group does a long interview, while the other group does a short interview.
+
+2. Sample size: 
+A field sample of approximatively 50,000 units was used. Among them, about 40,000 invitation letters to the electronic questionnaire were sent to selected households across Canada. A target completion of 24,000 questionnaires was expected. At the end, the resopnse rate was approximately 41.9%, equating to 16760 completed responses in the public-use microdata file.
+
+3. Target population: 
+The target population for the GSS Giving, volunteering and participating includes all persons 15 years of age and older living in the ten provinces of Canada. It excludes residents of Yukon, Northwest Territories, and Nunavut and full-time (residing for more than six months) residents of institutions.
+
+4. Sampling frame: 
+A combined frame that integrates landline and cellular telephone numbers from the Census and various administrative sources with Statistics Canada's dwelling frame. Frame records are groups of one or several telephone numbers associated with the same address (or a single number when an address could not be linked).
+
+5. Survey mode(s): 
+All respondents in the ten provinces were interviewed by telephone or self-completed an electronic questionnaire.
+
+6. Timeline: 
+Data collection period: 2018-09-04 to 2018-12-28, once every 5 years; Reference period: Past 12 months preceding interview date.
+
+7. Response rate: 
+41.9%
+
+8. Weights: 
+WGHT_PER: This is the basic weighting factor for analysis at the person level, adjusted by rejective sampling, non-response (household & individual level), and coverage error.
+Bootstrap weights are used for design-based variance estimation.
+
+9. Data processing
+Processing used Statistics Canada's Social Survey Processing Environment (SSPE), a generalized set of utilities for cleaning and transforming survey data.
+10. Cleaning, imputation, etc
+Almost all imputations were made using donor records selected through a score function.
+Imputation was carried out in nine sequential steps:
+   1. Personal income and family income
+   2-4. Formal volunteering variables (master file)
+   5-6. Informal volunteering variables (master file)
+   7-9. Donation variables and solicitation methods
+
+11. Sources of error
+Sampling error — quantified via the bootstrap method using the 500 bootstrap weights; all reported differences in StatsCan publications are significant at the 95% confidence level.
+Non-sampling errors:
+  - Coverage error: households without telephone service, and those 
+    with telephone services not covered by the integrated frame, are 
+    excluded from the surveyed population. The bias from this 
+    exclusion is expected to be small but not zero.
+  - Nonresponse error: at two levels — household-level (no one in the 
+    selected household replied) and individual-level (the selected 
+    person did not complete the questionnaire). The 41.9% response 
+    rate makes nonresponse the primary non-sampling error concern.
+  - Response errors: respondents may misreport behaviors due to 
+    recall difficulty (the survey asks about activities over the past 
+    12 months) and social desirability bias (volunteering and 
+    donating are socially valued, potentially inflating reports).
+  - Processing errors: minimized by the SSPE workflow and head 
+    office editing, but not eliminated.
+
+12. Limitations, known biases, etc
+Coverage gaps: the territories (Yukon, NWT, Nunavut), full-time institutional residents, and households without telephone service are excluded by design, biasing estimates away from rural, northern, elderly-institutionalized, and low-income populations.
+
+Response-side biases: the 41.9% response rate creates substantial nonresponse risk (only partially corrected by admin-data-driven weight adjustments); 12-month recall of donations and volunteer hours introduces imprecision; and because giving/volunteering are socially valued behaviors, social desirability bias may inflate reported rates.
+
+Design constraints: the cross-sectional design prevents tracking individual change over time; the 2018 shift to predominantly online self-completion may produce mode effects that complicate trend comparisons with earlier CATI-only cycles; and the rejective sub-sampling design means non-volunteers on the short-interview path have less detailed data, limiting some sub-analyses.
+
+13. Link to documentation and any additional sources used
+- Survey methodology page (full technical detail): https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&Id=796234
+- Variable list for Cycle 33: https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvVariableList&Id=796234
+
 ```
 
 ## Rubric
